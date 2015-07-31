@@ -10,5 +10,14 @@ Clone this project, then:
 
 ```
 mvn package
-java -cp $(hadoop classpath):target/maprfs-example*.jar MapRTest /tmp
+java -cp $(hadoop classpath):target/maprfs-example-1.0-SNAPSHOT.jar MapRTest /tmp
+```
+
+You should see output like:
+
+```
+mkdir( /tmp/dir) went ok, now writing file
+write( /tmp/file.w) went ok
+reading file: /tmp/file.w
+Read ok
 ```
