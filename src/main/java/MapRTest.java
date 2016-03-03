@@ -31,7 +31,7 @@ public class MapRTest
 
         // maprfs:/// -> uses the first entry in /opt/mapr/conf/mapr-clusters.conf
         // maprfs:///mapr/my.cluster.com/
-        // /mapr/my.cluster.com/
+        // mapr/my.cluster.com/
 
         // String uri = "maprfs:///";
         String dirname = args[ac++];
