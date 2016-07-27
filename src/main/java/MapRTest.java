@@ -20,8 +20,8 @@ public class MapRTest
     public static void main(String args[]) throws Exception {
         byte buf[] = new byte[ 65*1024];
         int ac = 0;
-        if (args.length != 1) {
-            System.out.println("usage: MapRTest pathname");
+        if (args.length != 2) {
+            System.out.println("usage: MapRTest uri pathname");
             return;
         }
 
@@ -29,13 +29,13 @@ public class MapRTest
         // maprfs:///mapr/my.cluster.com/
         // /mapr/my.cluster.com/
 
-        // String uri = "maprfs:///";
+        String uri = args[ac++];
         String dirname = args[ac++];
 
         Configuration conf = new Configuration();
 
-        //FileSystem fs = FileSystem.get(URI.create(uri), conf); // if wanting to use a different cluster
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(URI.create(uri), conf); // if wanting to use a different cluster
+        // FileSystem fs = FileSystem.get(conf);
 
         Path dirpath = new Path( dirname + "/dir");
         Path wfilepath = new Path( dirname + "/file.w");
