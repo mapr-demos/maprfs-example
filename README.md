@@ -10,7 +10,7 @@ Clone this project, then:
 
 ```
 mvn package
-java -cp $(hadoop classpath):target/maprfs-example-1.0-SNAPSHOT.jar MapRTest /tmp
+java -cp $(hadoop classpath):target/maprfs-example-1.0-SNAPSHOT.jar MapRTest maprfs:/// /tmp
 ```
 
 You should see output like:
